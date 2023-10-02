@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 import { HomePage } from '../page_objects/home_page';
 import { CreateSongPage } from '../page_objects/create_song_page';
 
-test('Add new song', async ({ page }) => {
-  await page.goto('http://192.168.1.45:8080');
+test('Add new song', async ({ page, request }) => {
+  await page.goto('http://192.168.1.108:8080');
   var homePage: HomePage = new HomePage(page);
   await homePage.addButton.click();
 
@@ -22,4 +22,5 @@ test('Add new song', async ({ page }) => {
   await page.waitForSelector('div.song-title');
   var total = await homePage.songs.count();
   await expect(homePage.songs.nth(total - 1)).toContainText('Song 1');
+  await request.get('http://localhost:8081/reset');
 });
