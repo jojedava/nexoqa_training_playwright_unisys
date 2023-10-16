@@ -27,12 +27,12 @@ services:
     command: "npm start"
     depends_on:
       - server
-    networks:
-      jenkins-network:
-        aliases:
-          - tabtracker
+#     networks:
+#       jenkins-network:
+#         aliases:
+#           - tabtracker
 
-networks:
-  jenkins-network:
-    external: true
-    name: jenkins-network
+# networks:
+#   jenkins-network:
+#     external: true
+#     name: jenkins-network
