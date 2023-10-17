@@ -1,5 +1,4 @@
 import { test, expect, Page } from '@playwright/test';
-import { unlinkSync } from 'fs';
 
 test('has title', async ({ page }) => {
   await page.goto('http://localhost:8080/');
@@ -133,4 +132,26 @@ test('expect.toHaveProperty', async ({ page, request }) => {
       },
     ],
   }).toHaveProperty('emails[1].id', 31);
+
+  //Locator
+  await expect(page.locator('#button')).not.toBeAttached();
+  await expect(page.locator('#button')).toBeAttached();
+
+  await expect(page.locator('#radio_checkbox')).toBeChecked();
+
+  await expect(page.locator('#radio_checkbox')).toBeDisabled();
+
+  await expect(page.locator('ul > li')).toContainText(['Name1', 'Name5']);
+  await expect(page.locator('div')).toContainText(['Name1', 'Name2']); //Fallará
+
+  await expect(page.locator('div')).toHaveAttribute('key', 'value');
+
+  await expect(page.locator('div')).toHaveClass('value');
+
+  await expect(page.locator('div')).toHaveCSS('z-index', '1000');
+
+  await expect(page.locator('div')).toHaveScreenshot('test.png');
+
+  //Page
+  await expect(page).toHaveScreenshot('page.png');
 });
