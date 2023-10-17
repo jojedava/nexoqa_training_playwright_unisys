@@ -1,0 +1,45 @@
+{
+  "cookies": [
+    {
+      "name": "YSC",
+      "value": "2BuBqnda90k",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "value": "GZXGF6uS_v4",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1713107302.344575,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "NZjS7fzoZJbftJCiLJFNurHhWHrV3vOgL1eCaExSgaE-1697555301-0-AVJ4ywnLuCUlTH6q+XfQn6MtsyWd/ni8L+jOH6zqudl4cEY2XFUZ7sC35J+wUgwZROdf22O+b8TkRcORWZ2aSr0=",
+      "domain": ".discogs.com",
+      "path": "/",
+      "expires": 1697557102.351551,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:8080",
+      "localStorage": [
+        {
+          "name": "vuex",
+          "value": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1bmlzeXNAbWllbmFpcmUuY29tIiwicGFzc3dvcmQiOiIkMmEkMDgkbnRWVmxlb0tuVEQuTkhPZWV2NWxZdXFneC90bnhDUHdCRnpqMXVNeko1MlV5SGRtc3FTbnEiLCJjcmVhdGVkQXQiOiIyMDIzLTEwLTE3VDE1OjA4OjIwLjAzM1oiLCJ1cGRhdGVkQXQiOiIyMDIzLTEwLTE3VDE1OjA4OjIwLjAzM1oiLCJpYXQiOjE2OTc1NTUzMDQsImV4cCI6MTY5ODE2MDEwNH0.F4PcsCcmqd7rpyXJ6VSbbaurfHcwAcaXcX3sU6NaTGQ\",\"user\":{\"id\":1,\"email\":\"unisys@mienaire.com\",\"password\":\"$2a$08$ntVVleoKnTD.NHOeev5lYuqgx/tnxCPwBFzj1uMzJ52UyHdmsqSnq\",\"createdAt\":\"2023-10-17T15:08:20.033Z\",\"updatedAt\":\"2023-10-17T15:08:20.033Z\"},\"isUserLoggedIn\":true,\"route\":{\"name\":\"songs\",\"path\":\"/songs\",\"hash\":\"\",\"query\":{},\"params\":{},\"fullPath\":\"/songs\",\"meta\":{},\"from\":{\"name\":\"login\",\"path\":\"/login\",\"hash\":\"\",\"query\":{},\"params\":{},\"fullPath\":\"/login\",\"meta\":{}}}}"
+        }
+      ]
+    }
+  ]
+}

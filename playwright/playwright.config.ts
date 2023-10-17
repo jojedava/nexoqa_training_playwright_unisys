@@ -25,42 +25,40 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-    headless: true,
+    headless: false,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
+  globalSetup: require.resolve('./tests/hooks/global_setup'),
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'init db',
-      testMatch: /hook_setup\.ts/,
-      teardown: 'clean db',
-    },
-    {
-      name: 'clean db',
-      testMatch: /hook_teardown\.ts/,
-    },
+    // {
+    //   name: 'login',
+    //   testMatch: /login_setup\.ts/,
+    // },
+    // {
+    //   name: 'clean db',
+    //   testMatch: /hook_teardown\.ts/,
+    // },
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      // dependencies: ['login'],
     },
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
     // },
-
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
     // },
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -70,7 +68,6 @@ export default defineConfig({
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
     // },
-
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
